@@ -227,7 +227,7 @@ with left_col:
     tickers = st.text_input("股票 (逗號分隔, 支援美股代號)", value="TSLA,NVDA,AAPL")
     tickers = [t.strip().upper() for t in tickers.split(",") if t.strip()!='']
     interval = st.selectbox("時間框架", ["5m", "15m", "60m", "1d"])
-    period = st.selectbox("抓取期間", ["7d","14d","30d","90d"], index=1)
+    period = st.selectbox("抓取期間", ["5d","14d","30d","90d"], index=1)
     hist_n = st.slider("MACD 柱子敏感度 (連續檢查根數)", 2, 6, 3)
     volume_ratio = st.slider("量能放大倍數 (預測上升)", 1.0, 3.0, 1.5)
     use_ema_cross = st.checkbox("使用 EMA5/EMA9 交叉確認", value=True)
